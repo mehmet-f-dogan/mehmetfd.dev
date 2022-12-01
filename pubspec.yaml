@@ -1,0 +1,41 @@
+name: mehmetfd.dev
+description: personal website
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  provider: ^6.0.0
+  flutter_devicon: ^1.0.1
+  flutter_dotenv: ^5.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true
+
+  assets:
+    - graphics/
+    - .env
+
+  fonts:
+    - family: MBytePC230
+      fonts:
+        - asset: fonts/Ac437_MBytePC230_8x16.ttf
+    - family:  MyAppIcons
+      fonts:
+       - asset: fonts/MyAppIcons.ttf
+
