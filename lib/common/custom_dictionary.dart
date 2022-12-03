@@ -20,4 +20,15 @@ class CustomDictionary {
         return "i'm mehmet. i make desktop apps, cli tools, backend services.";
     }
   }
+
+  static List<String> getLocationTexts(String lang) {
+    switch (lang) {
+      case "de":
+        return ["berlin, deutschland", "bursa, türkei"];
+      case "tr":
+        return ["berlin, almanya", "bursa, türkiye"];
+      default:
+        return ["berlin, germany", "bursa, turkey"];
+    }
+  }
 }

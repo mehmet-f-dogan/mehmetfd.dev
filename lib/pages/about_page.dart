@@ -43,7 +43,7 @@ class _AboutPageState extends State<AboutPage> {
         appBar: CustomAppBar(),
         body: SizedBox.expand(
           child: Padding(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(8),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,8 +65,8 @@ class _AboutPageState extends State<AboutPage> {
                       ),
                       FittedBox(
                         child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: _getProfileSection(),
+                          padding: const EdgeInsets.all(8.0),
+                          child: _getProfileSection(lang),
                         ),
                       ),
                     ],
@@ -87,7 +87,7 @@ class _AboutPageState extends State<AboutPage> {
     return pageMap[lang]!;
   }
 
-  Column _getProfileSection() {
+  Column _getProfileSection(String lang) {
     return Column(
       children: [
         Container(
@@ -102,6 +102,28 @@ class _AboutPageState extends State<AboutPage> {
           children: [
             SelectableText(
               AppConstants.getEmail(),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8.0, 0, 8, 0),
+              child: Row(
+                children: [
+                  const Icon(Icons.location_pin),
+                  Text(CustomDictionary.getLocationTexts(lang)[0]),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8.0, 0, 8, 0),
+              child: Row(
+                children: [
+                  const Icon(Icons.location_pin),
+                  Text(CustomDictionary.getLocationTexts(lang)[1]),
+                ],
+              ),
             ),
           ],
         ),
