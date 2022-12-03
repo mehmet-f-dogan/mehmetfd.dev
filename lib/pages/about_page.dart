@@ -103,7 +103,7 @@ class _AboutPageState extends State<AboutPage> {
         Row(
           children: [
             SelectableText(
-              " ${AppConstants.getEmail()}",
+              AppConstants.getEmail(),
             ),
           ],
         ),
