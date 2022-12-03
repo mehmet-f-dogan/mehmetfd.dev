@@ -7,6 +7,10 @@ class AppConstants {
   static final Color _lightShadowColor = Colors.grey[600]!;
   static const Color _darkShadowColor = Colors.black;
   static const Color _alternativeColor = Color.fromARGB(255, 71, 255, 80);
+  static final String _linkedinProfileLink = dotenv.env['LINKEDIN_PROFILE']!;
+  static final String _xingProfileLink = dotenv.env['XING_PROFILE']!;
+  static final String _githubProfileLink = dotenv.env['GITHUB_PROFILE']!;
+  static final String _email = dotenv.env['EMAIL_ADDRESS']!;
 
   static Color getLightShadowColor() {
     return _lightShadowColor;
@@ -29,14 +33,18 @@ class AppConstants {
   }
 
   static String getLinkedinLink() {
-    return dotenv.env['LINKEDIN_PROFILE']!;
+    return _linkedinProfileLink;
   }
 
   static String getXingLink() {
-    return dotenv.env['XING_PROFILE']!;
+    return _xingProfileLink;
   }
 
   static String getGithubLink() {
-    return dotenv.env['GITHUB_PROFILE']!;
+    return _githubProfileLink;
+  }
+
+  static String getEmail() {
+    return _email;
   }
 }

@@ -3,8 +3,6 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:mehmetfd.dev/common/app_constants.dart';
 import 'package:mehmetfd.dev/common/language_change_notifier.dart';
 import 'package:mehmetfd.dev/pages/about_page.dart';
-import 'package:mehmetfd.dev/pages/contact_page.dart';
-import 'package:mehmetfd.dev/pages/error_page.dart';
 import 'package:provider/provider.dart';
 
 Future main() async {
@@ -50,10 +48,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const AboutPage(),
         '/about': (context) => const AboutPage(),
-        '/contact': (context) => const ContactPage(),
       },
       onUnknownRoute: (settings) =>
-          MaterialPageRoute(builder: (context) => const ErrorPage()),
+          MaterialPageRoute(builder: (context) => const AboutPage()),
       debugShowCheckedModeBanner: false,
     );
   }

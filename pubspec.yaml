@@ -16,6 +16,7 @@ dependencies:
   provider: ^6.0.0
   flutter_devicon: ^1.0.1
   flutter_dotenv: ^5.0.2
+  file_saver: ^0.1.1
 
 dev_dependencies:
   flutter_test:
@@ -29,6 +30,7 @@ flutter:
 
   assets:
     - graphics/
+    - cv/
     - .env
 
   fonts:

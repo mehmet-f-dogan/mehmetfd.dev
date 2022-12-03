@@ -1,11 +1,15 @@
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:js' as js;
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_devicon/flutter_devicon.dart';
 import 'package:mehmetfd.dev/common/app_constants.dart';
 import 'package:mehmetfd.dev/common/custom_app_bar.dart';
-import 'package:mehmetfd.dev/common/custom_bottom_navigation_bar.dart';
 import 'package:mehmetfd.dev/common/custom_dictionary.dart';
 import 'package:mehmetfd.dev/common/language_change_notifier.dart';
 import 'package:mehmetfd.dev/common/my_app_icons.dart';
+import 'package:file_saver/file_saver.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -37,56 +41,51 @@ class _AboutPageState extends State<AboutPage> {
     String lang = LanguageChangeNotifier().selectedLanguage;
     pageMap[lang] ??= Scaffold(
         appBar: CustomAppBar(),
-        bottomNavigationBar: CustomBottomNavigationBar(),
         body: SizedBox.expand(
           child: Padding(
             padding: const EdgeInsets.all(15),
-            child: Column(
-              children: [
-                Expanded(
-                  child: Padding(
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
                     padding: const EdgeInsets.all(15),
                     child: Column(
                       children: [
-                        Expanded(
-                          child: FittedBox(
-                            child: Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    CustomDictionary.getWelcomeHeader(lang),
-                                    textScaleFactor: 3.5,
-                                  ),
-                                  Text(
-                                    CustomDictionary.getWelcomeText(lang),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ],
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Column(
+                            children: [
+                              Text(
+                                CustomDictionary.getWelcomeHeader(lang),
+                                textScaleFactor: 5,
                               ),
-                            ),
+                              Text(
+                                CustomDictionary.getWelcomeText(lang),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
                         ),
-                        Expanded(
-                          child: FittedBox(
-                            child: Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: _getProfileSection(),
-                            ),
+                        FittedBox(
+                          child: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: _getProfileSection(),
                           ),
                         ),
                       ],
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Container(
-                    alignment: Alignment.bottomCenter,
-                    child: _getTechStack(),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Container(
+                      alignment: Alignment.bottomCenter,
+                      child: _getTechStack(),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ));
@@ -101,6 +100,13 @@ class _AboutPageState extends State<AboutPage> {
           image: AssetImage('graphics/profile_pic.png'),
         ),
         _getProfileButtons(),
+        Row(
+          children: [
+            SelectableText(
+              " ${AppConstants.getEmail()}",
+            ),
+          ],
+        ),
       ],
     );
   }
@@ -158,27 +164,43 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   String cvLanguage = LanguageChangeNotifier().selectedLanguage;
-  Row _getProfileButtons() {
+  Widget _getProfileButtons() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextButton.icon(
-          onPressed: () {},
+          onPressed: () {
+            js.context
+                .callMethod('open', [AppConstants.getLinkedinLink(), '_blank']);
+          },
           icon: const Icon(MyAppIcons.linkedin),
           label: const Text("linkedin"),
         ),
         TextButton.icon(
-          onPressed: () {},
+          onPressed: () {
+            js.context
+                .callMethod('open', [AppConstants.getXingLink(), '_blank']);
+          },
           icon: const Icon(MyAppIcons.xing),
           label: const Text("xing"),
         ),
         TextButton.icon(
-          onPressed: () {},
+          onPressed: () {
+            js.context
+                .callMethod('open', [AppConstants.getGithubLink(), '_blank']);
+          },
           icon: const Icon(MyAppIcons.github),
           label: const Text("github"),
         ),
         TextButton.icon(
-          onPressed: () {},
+          onPressed: () {
+            (() async {
+              final byteData = await rootBundle.load('cv/cv_$cvLanguage.pdf');
+              FileSaver.instance.saveFile("cv_mehmetfdogan_$cvLanguage",
+                  byteData.buffer.asUint8List(), "pdf",
+                  mimeType: MimeType.PDF);
+            })();
+          },
           icon: const Icon(MyAppIcons.fileDownload),
           label: Row(
             children: [
@@ -197,10 +219,12 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   Widget _getTechTag(IconData data, String text) {
-    return TextButton.icon(
-      onPressed: () {},
-      icon: Icon(data),
-      label: Text(text),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [Icon(data), Text(text)],
+      ),
     );
   }
 }
@@ -211,7 +235,6 @@ class CvLanguageDropdownButton extends StatefulWidget {
 
   @override
   State<CvLanguageDropdownButton> createState() =>
-      // ignore: no_logic_in_create_state
       _CvLanguageDropdownButtonState(callback);
 }
 

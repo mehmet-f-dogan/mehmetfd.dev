@@ -13,51 +13,11 @@ class CustomDictionary {
   static String getWelcomeText(String lang) {
     switch (lang) {
       case "de":
-        return "ich bin mehmet. ich entwickle desktop-apps,\ncli-tools, backend-services.";
+        return "ich bin mehmet. ich entwickle desktop-apps, cli-tools, backend-services.";
       case "tr":
-        return "ben mehmet. masaüstü uygulamalari, cli araclari,\nbackend servisleri gelistiriyorum.";
+        return "ben mehmet. masaüstü uygulamalari, cli araclari, backend servisleri gelistiriyorum.";
       default:
-        return "i'm mehmet. i make desktop apps, \ncli tools, backend services.";
-    }
-  }
-
-  static List<String> getNavBarTexts(String lang) {
-    switch (lang) {
-      case "de":
-        return ["uber mich", "kontakt"];
-      case "tr":
-        return ["hakkimda", "iletisim"];
-      default:
-        return ["about", "contact"];
-    }
-  }
-
-  static List<String> getContactTexts(String lang) {
-    switch (lang) {
-      case "de":
-        return [
-          "e-mail",
-          "theme",
-          "ihre nachtricht",
-          "bitte eine e-Mail eingeben",
-          "bitte geben sie eine gültige e-mail ein"
-        ];
-      case "tr":
-        return [
-          "eposta",
-          "konu",
-          "mesajiniz",
-          "lutfen bir eposta adresi giriniz",
-          "lutfen gecerli bir eposta adresi giriniz"
-        ];
-      default:
-        return [
-          "email",
-          "about",
-          "your message",
-          "please enter an email",
-          "please enter a valid email"
-        ];
+        return "i'm mehmet. i make desktop apps, cli tools, backend services.";
     }
   }
 }
