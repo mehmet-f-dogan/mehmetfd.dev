@@ -49,33 +49,27 @@ class _AboutPageState extends State<AboutPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      children: [
-                        Padding(
+                  Column(
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            CustomDictionary.getWelcomeHeader(lang),
+                            textScaleFactor: 5,
+                          ),
+                          Text(
+                            CustomDictionary.getWelcomeText(lang),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                      FittedBox(
+                        child: Padding(
                           padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                CustomDictionary.getWelcomeHeader(lang),
-                                textScaleFactor: 5,
-                              ),
-                              Text(
-                                CustomDictionary.getWelcomeText(lang),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
+                          child: _getProfileSection(),
                         ),
-                        FittedBox(
-                          child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: _getProfileSection(),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8),
@@ -96,8 +90,12 @@ class _AboutPageState extends State<AboutPage> {
   Column _getProfileSection() {
     return Column(
       children: [
-        const Image(
-          image: AssetImage('graphics/profile_pic.png'),
+        Container(
+          constraints: const BoxConstraints(maxHeight: 200, minHeight: 150),
+          child: const Image(
+            fit: BoxFit.contain,
+            image: AssetImage('graphics/profile_pic.jpg'),
+          ),
         ),
         _getProfileButtons(),
         Row(
