@@ -26,7 +26,8 @@ const HeroSection = () => {
             <span className="font-semibold text-teal-600">
               Software Engineer{" "}
             </span>
-            based in Las Vegas, NV. Working towards creating software that makes everything better.
+            based in Las Vegas, NV. Working towards creating software that makes
+            everything better.
           </p>
           <Link
             to="projects"

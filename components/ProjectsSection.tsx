@@ -9,38 +9,40 @@ const projects = [
     name: "PollingApp",
     description:
       "Java based web app that allows users to create and vote on polls.",
-    image: "https://github.com/mehmet-f-dogan/polling-app/blob/master/screenshots/index.jpg?raw=true",
+    image:
+      "https://github.com/mehmet-f-dogan/polling-app/blob/master/screenshots/index.jpg?raw=true",
     github: "https://github.com/mehmet-f-dogan/polling-app",
     link: "https://portfolio-polling-app.mehmetfd.dev/",
   },
   {
     name: "ReactDocument",
     description: "GPT-3 powered code documentation tool.",
-    image: "https://github.com/mehmet-f-dogan/react-document/blob/master/public/ss.jpg?raw=true",
+    image:
+      "https://github.com/mehmet-f-dogan/react-document/blob/master/public/ss.jpg?raw=true",
     github: "https://github.com/mehmet-f-dogan/react-document",
     link: "https://portfolio-react-document.mehmetfd.dev/",
   },
   {
     name: "ReactFacebook",
-    description:
-      "Facebook clone built with React, and Firebase.",
-    image: "https://github.com/mehmet-f-dogan/react-facebook/blob/master/public/ss.jpg?raw=true",
+    description: "Facebook clone built with React, and Firebase.",
+    image:
+      "https://github.com/mehmet-f-dogan/react-facebook/blob/master/public/ss.jpg?raw=true",
     github: "https://github.com/mehmet-f-dogan/react-facebook",
     link: "https://portfolio-react-facebook.mehmetfd.dev/",
   },
   {
     name: "NextAudio",
-    description:
-      "E-commerce website for headphones built with Next.js.",
-    image: "https://github.com/mehmet-f-dogan/next-audio/blob/master/screenshots/index.jpg?raw=true",
+    description: "E-commerce website for headphones built with Next.js.",
+    image:
+      "https://github.com/mehmet-f-dogan/next-audio/blob/master/screenshots/index.jpg?raw=true",
     github: "https://github.com/mehmet-f-dogan/next-audio",
     link: "https://portfolio-next-audio.mehmetfd.dev/",
   },
   {
     name: "ReactFood",
-    description:
-      "Recipe search app built with React",
-    image: "https://github.com/mehmet-f-dogan/react-food/blob/master/screenshots/index.jpg?raw=true",
+    description: "Recipe search app built with React",
+    image:
+      "https://github.com/mehmet-f-dogan/react-food/blob/master/screenshots/index.jpg?raw=true",
     github: "https://github.com/mehmet-f-dogan/react-food",
     link: "https://portfolio-react-food.mehmetfd.dev/",
   },
@@ -72,7 +74,9 @@ const ProjectsSection = () => {
                     </Link>
                   </div>
                   <div className="mt-8 md:w-1/2">
-                    <h1 className="text-4xl text-teal-500 font-bold mb-6">{project.name}</h1>
+                    <h1 className="text-4xl text-teal-500 font-bold mb-6">
+                      {project.name}
+                    </h1>
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>
