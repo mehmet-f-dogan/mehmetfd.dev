@@ -45,19 +45,19 @@ const AboutSection = () => {
               </span>
               , and
               <span className="font-bold text-teal-500">{" driven"}</span>{" "}
-              software engineer based in Las Vegas, NV. From a young age, I've
+              software engineer based in Las Vegas, NV. From a young age, I&apos;ve
               always had a fascination with computers and solving complex
-              problems. That's why I decided to pursue a career in software
+              problems. That&apos;s why I decided to pursue a career in software
               engineering.
             </p>
             <br />
             <p>
-              Throughout my career, I've had the opportunity to work on some
+              Throughout my career, I&apos;ve had the opportunity to work on some
               amazing projects, but some of my proudest achievements have been
               in the field of{" "}
               <span className="font-bold text-teal-500">{" E-Mobility"}</span>.
-              I believe that technology can be used to solve some of the world's
-              most pressing problems, and it's been incredibly rewarding to work
+              I believe that technology can be used to solve some of the world&apos;s
+              most pressing problems, and it&apos;s been incredibly rewarding to work
               on projects that have the potential to
               <span className="font-bold text-teal-500">
                 {" help the environment"}
