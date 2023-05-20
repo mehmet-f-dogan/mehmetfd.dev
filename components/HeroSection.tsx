@@ -29,9 +29,15 @@ const HeroSection = () => {
             based in Las Vegas, NV. Working towards creating software that makes
             everything better.
           </p>
+          <a
+            href="https://bware.mehmetfd.dev"
+            className="text-neutral-100 font-semibold px-6 py-3 bg-rose-600 rounded shadow hover:bg-rose-700"
+          >
+            Blog
+          </a>
           <Link
             to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            className="text-neutral-100 font-semibold ml-3 px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
             activeClass="active"
             spy={true}
             smooth={true}
@@ -42,14 +48,14 @@ const HeroSection = () => {
           </Link>
           <a
             href="/CV.pdf"
-            className="text-neutral-100 font-semibold mx-3 px-6 py-3 bg-amber-600 rounded shadow hover:bg-amber-700"
+            className="text-neutral-100 font-semibold ml-3 px-6 py-3 bg-amber-600 rounded shadow hover:bg-amber-700"
             target="_blank"
           >
             CV
           </a>
           <a
             href="mailto:mehmet@mehmetfd.dev"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            className="text-neutral-100 font-semibold ml-3 px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
           >
             Email
           </a>
