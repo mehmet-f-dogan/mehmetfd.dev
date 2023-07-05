@@ -1,5 +1,8 @@
+"use client"
+
 import React from "react";
-import Image from "next/image";
+import { HiArrowDown } from "react-icons/hi";
+import { Link } from "react-scroll/modules";
 
 const skills = [
   { skill: "Java" },
@@ -15,6 +18,8 @@ const skills = [
   { skill: "MySQL" },
   { skill: "MongoDB" },
   { skill: "Google Cloud Platform" },
+  { skill: "AWS" },
+  { skill: "Kubernetes" },
   { skill: "Docker" },
   { skill: "REST" },
   { skill: "gRPC" },
@@ -45,7 +50,7 @@ const AboutSection = () => {
               </span>
               , and
               <span className="font-bold text-teal-500">{" driven"}</span>{" "}
-              software engineer based in Las Vegas, NV. From a young age, I&apos;ve
+              software engineer. From a young age, I&apos;ve
               always had a fascination with computers and solving complex
               problems. That&apos;s why I decided to pursue a career in software
               engineering.
@@ -56,8 +61,7 @@ const AboutSection = () => {
               amazing projects, but some of my proudest achievements have been
               in the field of{" "}
               <span className="font-bold text-teal-500">{" E-Mobility"}</span>.
-              I believe that technology can be used to solve some of the world&apos;s
-              most pressing problems, and it&apos;s been incredibly rewarding to work
+              It&apos;s been incredibly rewarding to work
               on projects that have the potential to
               <span className="font-bold text-teal-500">
                 {" help the environment"}
@@ -70,12 +74,11 @@ const AboutSection = () => {
               <span className="font-bold text-teal-500">{" chess "}</span>
               and
               <span className="font-bold text-teal-500">{" poker"}</span>,
-              cooking, playing bass guitar, and swimming. These hobbies keep me
-              engaged and allow me to explore new interests outside of work.
+              cooking, playing bass guitar, and swimming.
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
-            <h1 className="text-2xl font-bold mb-6">My Stack</h1>
+            <h1 className="text-2xl font-bold mb-6">My Stack includes:</h1>
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
               {skills.map((item, idx) => {
                 return (
@@ -90,6 +93,19 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex flex-row items-center text-center justify-center ">
+        <Link
+          to="projects"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="mb-24"
+        >
+          <HiArrowDown size={35} className="animate-bounce" />
+        </Link>
       </div>
     </section>
   );

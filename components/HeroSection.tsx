@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Link } from "react-scroll/modules";
 import { HiArrowDown } from "react-icons/hi";
+import { Typewriter } from 'react-simple-typewriter'
 
 const HeroSection = () => {
   return (
@@ -24,9 +25,16 @@ const HeroSection = () => {
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             I&#39;m a{" "}
             <span className="font-semibold text-teal-600">
-              Software Engineer{" "}
+              Software Consultant{" "}
             </span>
-            based in Las Vegas, NV. Working towards creating software that makes
+            <br />
+            based in <span>
+              <Typewriter
+                words={['Las Vegas, NV.', 'Berlin, Germany.', 'Bursa, Turkey.']}
+                loop={0}
+                cursor
+              />
+            </span><br />Creating software that makes
             everything better.
           </p>
           <a
@@ -35,17 +43,12 @@ const HeroSection = () => {
           >
             Blog
           </a>
-          <Link
-            to="projects"
+          <a
+            href="#projects"
             className="text-neutral-100 font-semibold ml-3 px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
           >
             Projects
-          </Link>
+          </a>
           <a
             href="/CV.pdf"
             className="text-neutral-100 font-semibold ml-3 px-6 py-3 bg-amber-600 rounded shadow hover:bg-amber-700"

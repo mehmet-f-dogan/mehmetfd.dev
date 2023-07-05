@@ -6,12 +6,12 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
 const projects = [
   {
-    name: "PollingApp",
-    description:
-      "Java based web app that allows users to create and vote on polls.",
+    name: "ChessU",
+    description: "Chess Course Platform.",
     image:
-      "https://github.com/mehmet-f-dogan/polling-app/blob/master/screenshots/index.jpg?raw=true",
-    github: "https://github.com/mehmet-f-dogan/polling-app",
+      "/chessu.jpg",
+    github: "https://github.com/mehmet-f-dogan/chessu",
+    link: "https://chessu.mehmetfd.dev/",
   },
   {
     name: "ReactDocument",
@@ -44,6 +44,22 @@ const projects = [
       "https://github.com/mehmet-f-dogan/react-food/blob/master/screenshots/index.jpg?raw=true",
     github: "https://github.com/mehmet-f-dogan/react-food",
     link: "https://portfolio-react-food.mehmetfd.dev/",
+  },
+
+  {
+    name: "YOK Atlas Scraper",
+    description: "For your college data scraping needs.",
+    image:
+      "/yok.jpg",
+    github: "https://github.com/mehmet-f-dogan/yokatlas-scraper",
+  },
+  {
+    name: "PollingApp",
+    description:
+      "Java based web app that allows users to create and vote on polls.",
+    image:
+      "https://github.com/mehmet-f-dogan/polling-app/blob/master/screenshots/index.jpg?raw=true",
+    github: "https://github.com/mehmet-f-dogan/polling-app",
   },
 ];
 

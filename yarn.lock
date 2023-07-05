@@ -447,13 +447,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/analytics@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@vercel/analytics@npm:1.0.1"
-  checksum: 6876e1d0868e85198d43a17ffec7266cdee5a53d5fc797d3f7e0d64e9d76a2ade3cbdcbc0a665e2ee2389f65dfc80591f7d667e9fc981cdbaa848006cbaefe19
-  languageName: node
-  linkType: hard
-
 "abbrev@npm:^1.0.0":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -3201,6 +3194,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"performance-now@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "performance-now@npm:2.1.0"
+  checksum: 534e641aa8f7cba160f0afec0599b6cecefbb516a2e837b512be0adbe6c1da5550e89c78059c7fabc5c9ffdf6627edabe23eb7c518c4500067a898fa65c2b550
+  languageName: node
+  linkType: hard
+
 "personal-website@workspace:.":
   version: 0.0.0-use.local
   resolution: "personal-website@workspace:."
@@ -3210,7 +3210,6 @@ __metadata:
     "@types/react": 18.0.27
     "@types/react-dom": 18.0.10
     "@types/react-scroll": ^1.8.6
-    "@vercel/analytics": ^1.0.1
     autoprefixer: ^10.4.13
     eslint: 8.32.0
     eslint-config-next: 13.1.6
@@ -3222,8 +3221,10 @@ __metadata:
     react-dom: 18.2.0
     react-icons: ^4.7.1
     react-scroll: ^1.8.9
+    react-simple-typewriter: ^5.0.1
     tailwindcss: ^3.2.4
     typescript: 4.9.4
+    typewriter-effect: ^2.20.1
   languageName: unknown
   linkType: soft
 
@@ -3405,6 +3406,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"raf@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "raf@npm:3.4.1"
+  dependencies:
+    performance-now: ^2.1.0
+  checksum: 50ba284e481c8185dbcf45fc4618ba3aec580bb50c9121385d5698cb6012fe516d2015b1df6dd407a7b7c58d44be8086108236affbce1861edd6b44637c8cd52
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
@@ -3443,6 +3453,16 @@ __metadata:
     react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
   checksum: 534ea65713a59ef7ddf623e38058220b654730352b624371cb2250bcf99784806b4564f3fa9295c969980e227e3de15903d95e069f9a3ca520ff0c0c1fb2e362
+  languageName: node
+  linkType: hard
+
+"react-simple-typewriter@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "react-simple-typewriter@npm:5.0.1"
+  peerDependencies:
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 43c7eb696a7293ceec54b3f31fa6db5e7ce1b312b55e357ecbf705eae522fbc661dd3000c57364f04e7afec327655b21b3cfc97c9e32193771892ad36e6a4426
   languageName: node
   linkType: hard
 
@@ -4123,6 +4143,19 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 3e2ab0772908676d9b9cb83398c70003a3b08e1c6b3b122409df9f4b520f2fdaefa20c3d7d57dce283fed760ac94b3ce94d4a7fa875127b67852904425a1f0dc
+  languageName: node
+  linkType: hard
+
+"typewriter-effect@npm:^2.20.1":
+  version: 2.20.1
+  resolution: "typewriter-effect@npm:2.20.1"
+  dependencies:
+    prop-types: ^15.8.1
+    raf: ^3.4.1
+  peerDependencies:
+    react: ^17.x || ^18.x
+    react-dom: ^17.x || ^18.x
+  checksum: fd60d8e8c184ef53fb2d0659357200e64f54289dcab7180ea5c05ed8ff703464fe6394ed4de36e24b5112b230ae4775ff74f2f09f9bfa8911e49901d66193312
   languageName: node
   linkType: hard
 
