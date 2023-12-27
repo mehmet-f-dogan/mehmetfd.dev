@@ -25,16 +25,10 @@ const HeroSection = () => {
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             I&#39;m a{" "}
             <span className="font-semibold text-teal-600">
-              Software Consultant{" "}
+              Senior Software Engineer{" "}
             </span>
             <br />
-            based in <span>
-              <Typewriter
-                words={['Las Vegas, NV.', 'Berlin, Germany.', 'Bursa, Turkey.']}
-                loop={0}
-                cursor
-              />
-            </span><br />Creating software that makes
+            based in Ankara.<br />Creating software that makes
             everything better.
           </p>
           <a
