@@ -4,7 +4,12 @@ import { FaAws, FaDocker, FaGit, FaJava, FaPython } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiAlibabaCloudFill, RiNextjsFill } from "react-icons/ri";
-import { SiGooglecloud, SiReact, SiTypescript } from "react-icons/si";
+import {
+  SiGooglecloud,
+  SiKubernetes,
+  SiReact,
+  SiTypescript,
+} from "react-icons/si";
 
 type TProps = {
   children?: React.ReactNode;
@@ -77,6 +82,9 @@ const Technologies = (props: Props) => {
           </Technology>
           <Technology text="Docker">
             <FaDocker />
+          </Technology>
+          <Technology text="Kubernetes">
+            <SiKubernetes />
           </Technology>
         </div>
       </div>

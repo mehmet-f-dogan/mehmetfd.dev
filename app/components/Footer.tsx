@@ -1,7 +1,6 @@
 import React from "react";
 import { FaFilePdf, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { TfiEmail } from "react-icons/tfi";
 
 type Props = {};
 
@@ -11,7 +10,7 @@ const Footer = (props: Props) => {
       <a
         href="https://linkedin.com/in/mehmet-f-dogan"
         target="_blank"
-        className="hover:bg-white hover:text-black duration-300  flex items-center justify-center border-2 p-2 rounded-lg"
+        className="hover:bg-white select-none hover:text-black duration-300  flex items-center justify-center border-2 p-2 rounded-lg"
       >
         <FaLinkedin className="mr-2" />
         LinkedIn
@@ -19,7 +18,7 @@ const Footer = (props: Props) => {
       <a
         href="CV.pdf"
         download={true}
-        className="hover:bg-white hover:text-black duration-300  flex items-center justify-center border-2 p-2 rounded-lg"
+        className="hover:bg-white select-none hover:text-black duration-300  flex items-center justify-center border-2 p-2 rounded-lg"
       >
         <FaFilePdf className="mr-2" />
         Resume
