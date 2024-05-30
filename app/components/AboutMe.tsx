@@ -29,7 +29,7 @@ const AboutMe = (props: Props) => {
         </p>
         <br />
         <p>
-          Currently, I am working under{" "}
+          Currently, I am working at{" "}
           <a
             className="underline hover:text-red-500 underline-offset-8"
             href="/"

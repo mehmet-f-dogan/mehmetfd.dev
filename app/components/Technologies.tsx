@@ -34,7 +34,7 @@ const Technologies = (props: Props) => {
         <h1 className="self-center font-bold text-2xl">Technologies</h1>
       </div>
       <br />
-      <div>
+      <div className="flex flex-col items-center justify-center w-full">
         <h2 className="text-xl underline underline-offset-4 my-2">Frontend</h2>
         <div className="flex flex-col xl:flex-row space-x-4">
           <Technology text="Next.js">
@@ -51,7 +51,7 @@ const Technologies = (props: Props) => {
           </Technology>
         </div>
       </div>
-      <div>
+      <div className="flex flex-col items-center justify-center w-full">
         <h2 className="text-xl underline underline-offset-4 my-2">Backend</h2>
         <div className="flex flex-col xl:flex-row items-center space-x-4">
           <Technology text="Java">
@@ -74,7 +74,7 @@ const Technologies = (props: Props) => {
           </Technology>
         </div>
       </div>
-      <div>
+      <div className="flex flex-col items-center justify-center w-full">
         <h2 className="text-xl underline underline-offset-4 my-2">DevOps</h2>
         <div className="flex flex-col xl:flex-row space-x-4">
           <Technology text="Git">
@@ -88,7 +88,7 @@ const Technologies = (props: Props) => {
           </Technology>
         </div>
       </div>
-      <div>
+      <div className="flex flex-col items-center justify-center w-full">
         <h2 className="text-xl underline underline-offset-4 my-2">Cloud</h2>
         <div className="flex flex-col xl:flex-row space-x-4">
           <Technology text="AWS">
