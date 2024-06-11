@@ -32,7 +32,8 @@ const AboutMe = (props: Props) => {
           Currently, I am working at{" "}
           <a
             className="underline hover:text-red-500 underline-offset-8"
-            href="/"
+            href="https://dgnsoftware.com"
+            target="_blank"
           >
             my own company
           </a>
@@ -40,7 +41,8 @@ const AboutMe = (props: Props) => {
         </p>
       </div>
       <a
-        href="/"
+        href="https://dgnsoftware.com"
+        target="_blank"
         className="self-center animate-bounce mt-12 p-4 text-2xl text-white hover:text-white bg-red-600 rounded-md"
       >
         Check out my work!
