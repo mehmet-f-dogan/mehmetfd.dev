@@ -23,6 +23,9 @@ const Experience = (props: Props) => {
       <br />
       <ol className="space-y-2">
         <li>
+          🇹🇷 Ankara Medipol University <br /> MD.
+        </li>
+        <li>
           🇩🇪 Deggendorf Institute of Technology <br /> MSc. in Applied Computer
           Science
         </li>
